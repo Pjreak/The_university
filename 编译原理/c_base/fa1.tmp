@@ -1,0 +1,17 @@
+Input pl/0 file?   n
+0 
+
+0 var f, c;
+
+1 
+
+1 begin
+
+2     read(f);
+
+4     c := 5 * (f - 32) / 9;
+
+12     write(c)
+
+14 end.
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaj">
+
+    <!--
+    ★application与activity中皆能够设置android:lable作为APP的名称
+    activity中的android:lable优先级高于application
+    ★当以上两者都未设置时显示为com.xiaj.FirstActivity
+    -->
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name">
+        <activity
+            android:name="com.xiaj.FirstActivity"
+            android:label="@string/app_name2"
+            android:theme="@android:style/Theme.Light">
+            <!--改变theme的背景色-->
+<!--            android:theme="@style/Theme.AppCompat.Light" 对应AppCompatActivity，解决本案例Activity换成AppCompatActivity出现的错误退出问题-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

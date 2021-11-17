@@ -1,0 +1,33 @@
+﻿body {
+    background-image: url("../images/loginback.jpg");
+}
+
+.loginbox {
+    position: absolute;
+    top: 200px;
+    left: 35%;
+    right: 35%;
+    background: #FFF;
+    height: 200px;
+    padding: 30px;
+}
+
+    .loginbox input[type="text"] {
+        width: 250px;
+        height: 35px;
+    }
+
+    .loginbox input[type="password"] {
+        width: 250px;
+        height: 35px;
+    }
+
+    .loginbox .buttondiv {
+        text-align: center;
+    }
+
+        .loginbox .buttondiv input[type="submit"] {
+            width: 100px;
+            height: 35px;
+            font-size: 1.3em;
+        }

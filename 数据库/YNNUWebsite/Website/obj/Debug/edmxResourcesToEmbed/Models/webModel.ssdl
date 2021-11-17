@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ynnuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="menu_id" Type="int" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="writer" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="add_time" Type="datetime" Nullable="false" />
+    <Property Name="click" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="menu_id" Type="int" />
+    <Property Name="title" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="sort_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="rank" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_article_menu">
+    <End Role="menu" Type="Self.menu" Multiplicity="1" />
+    <End Role="article" Type="Self.article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="article">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_menu_menu1">
+    <End Role="menu" Type="Self.menu" Multiplicity="0..1" />
+    <End Role="menu1" Type="Self.menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="menu1">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ynnuModelStoreContainer">
+    <EntitySet Name="article" EntityType="Self.article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="menu" EntityType="Self.menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_article_menu" Association="Self.FK_article_menu">
+      <End Role="menu" EntitySet="menu" />
+      <End Role="article" EntitySet="article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_menu_menu1" Association="Self.FK_menu_menu1">
+      <End Role="menu" EntitySet="menu" />
+      <End Role="menu1" EntitySet="menu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

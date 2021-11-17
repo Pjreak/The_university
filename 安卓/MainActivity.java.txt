@@ -1,0 +1,58 @@
+package com.zxy;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+    private Button btn1;
+    private Button btn2;
+    private ImageView iv1;
+    private int[] img = {R.drawable.left, R.drawable.right};
+    private boolean flag=false ;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        setTitle("1943205000103 赵晓瑜");//设置标题栏
+        initView();
+    }
+
+    private void initView() {
+        btn1 = (Button) findViewById(R.id.btn1);
+        btn2 = (Button) findViewById(R.id.btn2);
+        iv1 = (ImageView) findViewById(R.id.iv1);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (flag=false) {
+                    iv1.setImageResource(img[0]);
+                }
+                else{
+                    iv1.setImageResource(img[0]);
+                }
+            }
+
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (flag=true) {
+                   iv1.setImageResource(img[1]);
+                }else{
+                    iv1.setImageResource(img[1]);
+                }
+            }
+        });
+    }
+}

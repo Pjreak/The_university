@@ -1,0 +1,119 @@
+﻿body {
+}
+
+ul, li {
+    list-style: none;
+    margin: 0px;
+}
+
+.clr {
+    clear: both;
+}
+
+.w1000 {
+    width: 1000px;
+}
+
+.wcenter {
+    margin: 0px auto;
+}
+
+#logo {
+    width: 100%;
+    height: 100px;
+}
+
+.menu {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #808080;
+}
+
+    .menu li {
+        float: left;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background: #DDD;
+}
+
+    .footer .ico {
+        width: 100px;
+        float: left;
+        height: 100px;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .footer .text1 {
+        width: 400px;
+        float: left;
+        height: 100px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .footer .text2 {
+        width: 400px;
+        float: right;
+        height: 100px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+.list {
+}
+
+    .list .leftmenu {
+        width: 300px;
+        float: left;
+        border: solid 1px #000;
+    }
+
+        .list .leftmenu li {
+            margin: 15px 10px;
+            border-bottom: dashed 1px #CCC;
+        }
+
+            .list .leftmenu li a {
+                color: #000;
+                text-decoration: none;
+            }
+
+    .list .rightcontent {
+        width: 690px;
+        float: right;
+    }
+
+.view {
+}
+
+    .view .title {
+        font-size: 1.3em;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .view .info {
+        font-size: 0.93em;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .view .text {
+        line-height: 2;
+    }
+
+        .view .text p {
+            text-indent: 2em;
+        }

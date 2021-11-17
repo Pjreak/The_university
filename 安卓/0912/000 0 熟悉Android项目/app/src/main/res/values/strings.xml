@@ -1,0 +1,7 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--新版本可以去掉上面一行-->
+<resources>
+    <string name="hello">Hello World, 你好，安卓!</string>
+    <string name="app_name">我是application的Label</string>
+    <string name="app_name2">我是Activity的Label</string>
+</resources>

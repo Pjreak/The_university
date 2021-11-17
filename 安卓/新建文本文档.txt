@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="395dp"
+        android:layout_height="300dp"
+        android:text=""
+        android:textSize="35dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="416dp"
+        android:layout_height="375dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="339dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="1.你喜欢的水果是（）"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView112"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:text="" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="A.葡萄" />
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="B.芒果" />
+
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="C.西瓜" />
+
+            <RadioButton
+                android:id="@+id/radioButton14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="D.苹果" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="416dp"
+        android:layout_height="375dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView211"
+                android:layout_width="339dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="2.赵晓瑜是那里的人? ( )"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView212"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:text="" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="A.玉溪" />
+
+            <RadioButton
+                android:id="@+id/radioButton22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="B.大理" />
+
+            <RadioButton
+                android:id="@+id/radioButton23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="C.昆明" />
+
+            <RadioButton
+                android:id="@+id/radioButton24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="D.祥云" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="411dp"
+        android:layout_height="378dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView311"
+                android:layout_width="339dp"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="3、你喜欢的颜色有: ()" />
+
+            <TextView
+                android:id="@+id/textView312"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:text="" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="A.白色" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="B.黑色" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="C.蓝色" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="D.绿色" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="407dp"
+        android:layout_height="375dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView411"
+                android:layout_width="339dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:text="4.你喜欢的小说有()。"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView412"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="A.《笑傲江湖》" />
+
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="B.《倚天屠龙记》" />
+
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="C.《天堂旅行团》" />
+
+        <CheckBox
+            android:id="@+id/checkBox9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="D.《房思琪的秘密乐园》" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="162dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#2e8b57"
+        android:text="上一题"
+        android:textSize="35dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="149dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#2e8b57"
+        android:text="下一题"
+        android:textSize="35dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+package com.zxy;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button button,button1;
+    private LinearLayout linearLayout1,linearLayout2,linearLayout3,linearLayout4;
+    private RadioGroup radioGroup1,radioGroup2;
+    private TextView textView1,textView2,textView3,textView4,textView5;
+    private CheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8;
+
+    int q=0,w=0,e=0,r=0;
+    //统计分数
+    int group=0;
+    //标志，用来控制界面
+    int count = 0;
+    //记录自己选择的答案
+    String str = new String(" ");
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        setTitle("1943205000103 赵晓瑜");
+        button = findViewById(R.id.button11);
+        button1 = findViewById(R.id.button12);
+
+        linearLayout1 = findViewById(R.id.linear1);
+        linearLayout2 = findViewById(R.id.linear2);
+        linearLayout3 = findViewById(R.id.linear3);
+        linearLayout4 = findViewById(R.id.linear4);
+
+        radioGroup1 = findViewById(R.id.radio1);
+        radioGroup2 = findViewById(R.id.radio2);
+
+        textView1 = findViewById(R.id.textView112);
+        textView2 = findViewById(R.id.textView212);
+        textView3 = findViewById(R.id.textView312);
+        textView4 = findViewById(R.id.textView412);
+        textView5 = findViewById(R.id.textView5);
+
+
+        checkBox1 = findViewById(R.id.checkBox);
+        checkBox2 = findViewById(R.id.checkBox2);
+        checkBox3 = findViewById(R.id.checkBox3);
+        checkBox4 = findViewById(R.id.checkBox4);
+        checkBox5 = findViewById(R.id.checkBox6);
+        checkBox6 = findViewById(R.id.checkBox7);
+        checkBox7 = findViewById(R.id.checkBox8);
+        checkBox8 = findViewById(R.id.checkBox9);
+
+
+        button.setOnClickListener(this);
+        button1.setOnClickListener(this);
+
+        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                q=1;
+            }
+
+
+        });
+        radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                w=1;
+            }
+        });
+        checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    e=1;
+                }else e=0;
+            }
+        });
+        checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    e=1;
+                }else e=0;
+            }
+        });
+        checkBox3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    e=1;
+                }else e=0;
+            }
+        });
+        checkBox4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    e=1;
+                }else e=0;
+            }
+        });
+        checkBox5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    r=1;
+                }else r=0;
+            }
+        });
+        checkBox6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    r=1;
+                }else r=0;
+            }
+        });
+        checkBox7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    r=1;
+                }else r=0;
+            }
+        });
+        checkBox8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    r=1;
+                }else r=0;
+            }
+        });
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.button11://“上一题”按钮按下
+                count = (--count) % 7;
+                //显示第一个页面
+                if (count == 0) {
+                    button.setVisibility(View.INVISIBLE);
+                    linearLayout2.setVisibility(View.INVISIBLE);
+                    linearLayout1.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView1.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView1.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView1.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView1.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView1.setText("0/4");
+                    }
+                }
+                //显示第二个页面
+                else if (count == 1) {
+                    button.setVisibility(View.VISIBLE);
+                    linearLayout1.setVisibility(View.INVISIBLE);
+                    linearLayout3.setVisibility(View.INVISIBLE);
+                    linearLayout2.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView2.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView2.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView2.setText("2/2");
+                    }else if (q+w+e+r==1){
+                        textView2.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView2.setText("0/4");
+                    }
+                }
+                //显示第三个页面
+                else if (count == 2) {
+                    linearLayout2.setVisibility(View.INVISIBLE);
+                    linearLayout4.setVisibility(View.INVISIBLE);
+                    linearLayout3.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView3.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView3.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView3.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView3.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView3.setText("0/4");
+                    }
+                    button1.setText("下一题");
+                }
+                //显示第四个页面
+                else if (count == 3) {
+                    linearLayout3.setVisibility(View.INVISIBLE);
+                    linearLayout4.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView4.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView4.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView4.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView4.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView4.setText("0/4");
+                    }
+                    button1.setText("提交");
+                }
+                break;
+            case R.id.button12:
+                count = (++count) % 5;
+                if (count == 0) {
+                    button.setVisibility(View.INVISIBLE);
+                    linearLayout1.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView1.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView1.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView1.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView1.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView1.setText("0/4");
+                    }
+                } else if (count == 1) {
+                    button.setVisibility(View.VISIBLE);
+                    linearLayout1.setVisibility(View.INVISIBLE);
+                    linearLayout2.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView2.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView2.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView2.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView2.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView2.setText("0/4");
+                    }
+                } else if (count == 2) {
+                    linearLayout2.setVisibility(View.INVISIBLE);
+                    linearLayout3.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView3.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView3.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView3.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView3.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView3.setText("0/4");
+                    }
+                    button1.setText("下一题");
+                } else if (count == 3) {
+                    linearLayout3.setVisibility(View.INVISIBLE);
+                    linearLayout4.setVisibility(View.VISIBLE);
+                    if(q+w+e+r==4){
+                        textView4.setText("4/4");
+                    }else if (q+w+e+r==3){
+                        textView4.setText("3/4");
+                    }else if (q+w+e+r==2){
+                        textView4.setText("2/4");
+                    }else if (q+w+e+r==1){
+                        textView4.setText("1/4");
+                    }else if (q+w+e+r==0){
+                        textView4.setText("0/4");
+                    }
+                    button1.setText("提交");
+                } else if (count == 4) {
+                    linearLayout4.setVisibility(View.INVISIBLE);
+                    button.setVisibility(View.INVISIBLE);
+                    button1.setVisibility(View.INVISIBLE);
+                    //第一题判断
+                    RadioButton radioButton = (RadioButton) findViewById(radioGroup1.getCheckedRadioButtonId());
+                    str = str.concat((String) radioButton.getText().toString().substring(0, 2));
+                    if (radioButton.getId() == R.id.radioButton11) {
+                        group = group + 25;
+                    }
+                    //第二题判断
+                    radioButton = (RadioButton) findViewById(radioGroup2.getCheckedRadioButtonId());
+                    if (radioButton.getId() == R.id.radioButton22) {
+                        group = group + 25;
+                    }
+                    str = str.concat((String) radioButton.getText().toString().substring(0, 2));
+                    //第三题判断
+                    if (checkBox1.isChecked()) {
+                        str = str.concat((String) checkBox1.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox2.isChecked()) {
+                        str = str.concat((String) checkBox2.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox3.isChecked()) {
+                        str = str.concat((String) checkBox3.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox4.isChecked()) {
+                        str = str.concat((String) checkBox4.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox1.isChecked() && (checkBox2.isChecked()) && (!checkBox3.isChecked()) && (!checkBox4.isChecked())) {
+                        group = group + 25;
+                    }
+
+                    str = str.concat(".");
+                    //第四题判断
+                    if (checkBox5.isChecked()) {
+                        str = str.concat((String) checkBox5.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox6.isChecked()) {
+                        str = str.concat((String) checkBox6.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox7.isChecked()) {
+                        str = str.concat((String) checkBox7.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox8.isChecked()) {
+                        str = str.concat((String) checkBox8.getText().toString().substring(0, 1));
+                    }
+                    if (checkBox1.isChecked() && checkBox8.isChecked() && !checkBox4.isChecked() && !checkBox5.isChecked()) {
+                        group = group + 25;
+                    }
+                    
+                    textView5.setVisibility(View.VISIBLE);
+                    textView5.setText("正确答案为A.B.AB.CD\n" + "你选择的为" + str + " "+"\n您得分" + group + "分");
+                    textView5.setVisibility(View.VISIBLE);
+                }
+                break;
+        }
+    }
+}

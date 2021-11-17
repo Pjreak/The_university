@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ynnuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="menu_id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="writer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="add_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="click" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="menu" Relationship="Self.FK_article_menu" FromRole="article" ToRole="menu" />
+  </EntityType>
+  <EntityType Name="menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="menu_id" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sort_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="article" Relationship="Self.FK_article_menu" FromRole="menu" ToRole="article" />
+    <NavigationProperty Name="menu1" Relationship="Self.FK_menu_menu1" FromRole="menu" ToRole="menu1" />
+    <NavigationProperty Name="menu2" Relationship="Self.FK_menu_menu1" FromRole="menu1" ToRole="menu" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rank" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_article_menu">
+    <End Role="menu" Type="Self.menu" Multiplicity="1" />
+    <End Role="article" Type="Self.article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="article">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_menu_menu1">
+    <End Role="menu" Type="Self.menu" Multiplicity="0..1" />
+    <End Role="menu1" Type="Self.menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="menu1">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ynnuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="article" EntityType="Self.article" />
+    <EntitySet Name="menu" EntityType="Self.menu" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="FK_article_menu" Association="Self.FK_article_menu">
+      <End Role="menu" EntitySet="menu" />
+      <End Role="article" EntitySet="article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_menu_menu1" Association="Self.FK_menu_menu1">
+      <End Role="menu" EntitySet="menu" />
+      <End Role="menu1" EntitySet="menu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

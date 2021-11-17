@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 30
+    //compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.xiaj"
+        minSdk 26
+        targetSdk 30
+//        minSdkVersion 26
+//        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //        viewBinding {enabled = true}  //老版本
+        buildFeatures {
+            dataBinding = true
+            viewBinding = true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        //Android Debug Database变更端口，默认8080
+        debug {
+            resValue("string", "PORT_NUMBER", "49959")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Android Debug Database
+    //debugCompile依赖，debug模式才会打包进去，不需配置
+//    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    //加入对SQLiteStudio支持，同时加入internet访问权限
+//    implementation files('src/main/libs/SQLiteStudioRemote.jar')
+}

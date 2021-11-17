@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="web.master.cs" Inherits="Website.web" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="style/web.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="form1" runat="server">
+        <div class="w1000 wcenter">
+        <div id="logo">
+            <img src="images/logo.png" />
+
+        </div>
+        <div class="menu">
+            <ul>
+                <asp:Repeater ID="RepeaterMenu" runat="server" DataSourceID="SqlDataSourceMenu">
+                    <ItemTemplate>
+                        <li>
+                            <a href='<%#Eval("id","list.aspx?id={0}") %>'>
+                                <%# Eval("title") %>
+                            </a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <asp:SqlDataSource ID="SqlDataSourceMenu" runat="server" ConnectionString="<%$ ConnectionStrings:ynnuConnectionString %>" SelectCommand="SELECT * FROM [menu] WHERE ([menu_id] IS NULL) ORDER BY [sort_id]"></asp:SqlDataSource>
+            </ul>
+        </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <div class="clr"></div>
+        <div class="footer">
+            <div class="ico">
+                <img src="images/ynnu.png" /></div>
+            <div class="text1">云南师范大学 版权所有 滇ICP备05001257号云南师范大学党委宣传部、信息管理处设计开发</div>
+            <div class="text2">地址：呈贡主校区：呈贡区雨花片区1号 邮编：650500 一二·一西南联大校区：昆明市一二·一大街298号 邮编：650092</div>
+        </div></div>
+    </form>
+</body>
+</html>
