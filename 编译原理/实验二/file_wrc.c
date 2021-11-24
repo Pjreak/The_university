@@ -66,32 +66,6 @@ int main()
     fprintf(co,"%s包含运算符：%d个\n", filename_1, count_2);
     fprintf(co,"%s包含分隔符为：%d个\n", filename_1, count_3);
     fprintf(co,"%s包含数字为：%d个\n", filename_1, count_4); 
-    //lenth = strlen(buf);
-    // printf("%s有如下字符：\n%s\n", filename_1, buf); //输出文件内容和字符大小
-    // printf("%s有%d个字符\n", filename_1, lenth - 1); //输出文件字符内容
-
-    // for (i = 0; i < N; i++)
-    // {
-    //     if ((buf[i] >= 'a' && buf[i] <= 'z') || (buf[i] >= 'A' && buf[i] <= 'Z'))
-    //     {
-    //         count_1++;
-    //     }
-    //     for (m = 0; m < M - 1; m++)
-    //     {
-    //         if (num_1[m] == buf[i])
-    //         {
-    //             count_2++;
-    //         }
-    //     }
-    //     for (j = 0; j < P - 1; j++)
-    //     {
-    //         if (num_2[j] == buf[i])
-    //         {
-    //             count_3++;
-    //         }
-    //     }
-    //三层for循环统计字母、运算符、分隔符数量
-
     printf("%s包含字母为：%d个\n", filename_1, count_1);
     printf("%s包含运算符：%d个\n", filename_1, count_2);
     printf("%s包含分隔符为：%d个\n", filename_1, count_3);
